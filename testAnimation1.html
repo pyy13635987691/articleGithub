@@ -44,7 +44,7 @@
 	</style>
 	<script type="text/javascript">
 	<!--
-	 var timer = { //设计一个毫秒计时器模型，该模型可以同时并行记录多个事件的发生经历的时间，开发者可以用字符串（msg）作为时钟的唯一标识，进行操作。原理简述如下：当timer.begin(msg)运行开启计时，timer.clock记录一个时钟对象，而timer.end(msg)用于结束该标识的计时，返回毫秒级别的时间差，同时把相应的时钟对象删除。
+	 var timer = { //设计一个毫秒计时器模型，该模型可以同时并行记录多个事件的发生经历的时间，开发者字符串（msg）作为时钟的唯一标识，当timer.begin(msg)运行开启计时，而timer.end(msg)用于结束该标识的计时，返回毫秒级别的时间差。
 	         clock : [] ,
 			 begin : function(msg){
 			          let beginTime = new Date() - 0 ;
@@ -79,7 +79,6 @@
 
 
 	timer.end('wrong parameter') ; //故意写错，用来测试计时器模型的参数。
-
 	//-->
 	</script>
   </head>
@@ -126,15 +125,7 @@
 	print("Hello , this App will check the preformace of you computing system! ") ;
 	print("I'm very good at programmming! ") ;
 	print("Recursive function can do a lot of pretty good things! ") ;
-  /*************************************************
-  writen by masterLijh
- 2024 3 18
-   1、print函数用来在App页面上生成列表li内容，它假设body标签中有ol元素
-   2、调用函数print(str)会用动画的方式把str逐个字符打印出来
-   3、该函数利用了函数式编程方法，把函数看作对象，建立和利用print.str属性
-
-  ******************/
-	function print(str){
+    function print(str){
 	  if (print.str){ //如果存在print.str则说明print函数正在异步输出中
 		  setTimeout(()=>print(str) , 1000) ;
 		  return ;
@@ -167,8 +158,6 @@
      }
       return document.getElementById(eleId) ;
     }
-
-	
    //-->
    </script> 
   </body>
