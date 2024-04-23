@@ -1,8 +1,9 @@
 *{margin:0}
 body{
        background-color: rgb(0,0,0) ;
-	     }
-main>img#bookPage{
+	   overflow: hidden ;
+     }
+img#bookPage{
  max-width: 100%;
 }
 header{
@@ -10,67 +11,41 @@ header{
  background: rgb(250,100,0);
  color: rgb(250,250,0);
 }
-nav {
- height: 10% ;
-}
+
 footer{
  height: 10% ;
- background: rgb(30,20,10);
+ background: rgb(100,50,50);
  color: white;
 }
 main{
- height: 65% ;
+ height: 75% ;
  position:relative;
- /*在某些设备中，main容器内的bookPage插图可能高度可能超出设定范围，对超出的部分隐藏处理！*/
-  overflow: hidden ; 
 }
+div#logoFace{
+ width:50%; 
+ position:absolute;
+ top:5px;
+ right:10px;
+}
+img#teacherFace{
+  width:60%; 
+  border:1px solid red ;
+ }
 
-
-header>p#lessonName{
+p#lessonName{
   font-size: 1.5em;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.2em;
   text-align:center;
    
 }
-main>img#teacherFace{
-  position:absolute;
-  top:4% ;
-  right: 3% ;
-  width:33%; 
- 
- }
-
-main>p#teaching{
-  position:absolute;
-  width: 70%;
-  top:30%;
-  right:0;
+p#teaching{
   color:white ;
-  text-shadow: 2px 2px black ; 
+  text-shadow: 2px 2px green  
 }
-footer>p#statusInfo{
-  font-size: 0.75em;
+p#footerInfo{
+  font-size: 0.8em;
   text-align:center;
- }
-nav>p#chapter{
- color: white ;
- font-size: 1.2em;
- 
- text-align:center;
- background-color: brown ;
-}
-
-div#progressBar{
- width: 2%;
- height: 10% ;
- position: absolute ;
- z-index: 5 ;
- left:0;
- bottom:20%;
- background-color:brown;
- color:white;
- padding:0.5em;
- line-height:3em;
+  
 }
 /*
 @media screen and (min-width: 600px){
