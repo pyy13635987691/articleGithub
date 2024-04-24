@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width , initial-scale=1">
+    <!-- 
+   增加这句后，可以看到浏览器的DevTools面板的模拟移动设备状态的变化
+  -->
+    <title>Welcome to myCTApp</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        
+        header {
+            text-align: center;
+            border: 2px solid blue;
+            background-color: rgb(184, 188, 193);
+            color: black;
+            height: 10%;
+        }
+        
+        nav {
+            border: 2px solid blue;
+            height: 5%;
+        }
+        
+        main {
+            height: 75%;
+            background-image: url(../lesson/CS.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        footer {
+            background-color: rgb(122, 240, 249);
+            color: black;
+            border: 2px solid blue;
+            height: 10%;
+        }
+        
+        p#book {
+            font-size: 1.5em;
+        }
+        
+        button {
+            font-size: 1.5em;
+            margin-right: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <p id="book">
+            剑桥雅思系列课程@PengYY
+        </p>
+    </header>
+
+    <nav>
+        <button>
+            导航1
+        </button>
+        <button>
+            导航2
+        </button>
+        <button>
+            导航3
+        </button>
+    </nav>
+
+
+    <!-- <p id="teaching">
+        ‘读好书、练思维、勤编程’ @PengYY 计算思维系列课程
+    </p> -->
+    <main>
+
+    </main>
+    <!-- <img src="../lesson/bitCoin.jpg"> -->
+    <footer>
+        <p id="statusInfo">
+            CopyRight from 彭泱旸 江西科技师范大学 2022--2025
+        </p>
+    </footer>
+
+    <script>
+        var UI = {};
+        UI.deviceWidth = window.innerWidth;
+        UI.deviceHeight = window.innerHeight;
+        document.body.style.height = UI.deviceHeight + "px";
+        document.body.style.fontSize = UI.deviceWidth / 24 + "px";
+    </script>
+</body>
+
+</html>
